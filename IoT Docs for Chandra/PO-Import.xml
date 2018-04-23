@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE PurchaseOrderMessage SYSTEM "http://daffy.sciquest.com/app_docs/dtd/po/PO.dtd">
+<PurchaseOrderMessage version="3.0">
+	<Header>
+		<MessageId>A999</MessageId>
+		<Timestamp>2018-05-31T13:50:23.848-04:00</Timestamp>
+		<Authentication>
+			<Identity>30001144</Identity>
+			<SharedSecret>30001144</SharedSecret>
+		</Authentication>
+	</Header>
+	<PurchaseOrder>
+   <POHeader>
+      <RevisionNumber>0</RevisionNumber>
+      <RevisionDate/>
+      <!-- This needs to be unique and can be the key for searching for the PO once created -->
+      <PONumber>100011190</PONumber>
+      <AlternatePONumber />
+      <Requestor>
+         <UserProfile username="_sq_szukowski">
+            <FirstName>Steven</FirstName>
+            <LastName>Zukowski</LastName>
+            <Email>szukowski@sciquest.com</Email>
+         </UserProfile>
+      </Requestor>
+      <Priority>Normal</Priority>
+      <CreateDateTime/>
+      <InitialRevisionDateTime/>
+      <!-- This is the supplier of the item that you are purchasing from -->
+      <Supplier id="19613">
+         <Name>Alexis Corp.</Name>
+         <FulfillmentAddressInternalId>19613</FulfillmentAddressInternalId>
+         <ContactInfo type="main">
+            <Phone>
+               <TelephoneNumber>
+                  <CountryCode>1</CountryCode>
+                  <AreaCode>919</AreaCode>
+                  <Number>6592100</Number>
+               </TelephoneNumber>
+            </Phone>
+            <Fax>
+               <TelephoneNumber>
+                  <CountryCode>245100</CountryCode>
+                  <AreaCode>1</AreaCode>
+                  <Number>602</Number>
+                  <Extension>9</Extension>
+               </TelephoneNumber>
+            </Fax>
+            <Email>axxoraus@axxora.com</Email>
+            <ContactAddress>
+               <AddressLine linenumber="1">6181 Cornerstone Ct., East</AddressLine>
+               <AddressLine linenumber="2">Suite 103</AddressLine>
+               <City>San Diego</City>
+               <State>CA</State>
+               <PostalCode>94121</PostalCode>
+               <Country isocountrycode="US">United States</Country>
+            </ContactAddress>
+         </ContactInfo>
+      </Supplier>
+      <BillTo>
+         <Address>
+            <TemplateName>Test Bill To 1</TemplateName>
+            <AddressCode>TestBillTo1</AddressCode>
+            <Contact label="Contact Line 1" linenumber="1">Attention</Contact>
+            <AddressLine label="Address Line 1" linenumber="1">102 Rainbow Street</AddressLine>
+            <City>Oz</City>
+            <State>NC</State>
+            <PostalCode>23424</PostalCode>
+            <Country isocountrycode="IT">Italy</Country>
+         </Address>
+      </BillTo>
+      <ShipTo>
+         <Address>
+            <TemplateName>Test Ship To</TemplateName>
+            <AddressCode>TestShipTo</AddressCode>
+            <Contact label="Contact Line 1" linenumber="1">Attention</Contact>
+            <AddressLine label="Address Line 1" linenumber="1">123 Easy Street</AddressLine>
+            <City>Annietown</City>
+            <State>NC</State>
+            <PostalCode>27615</PostalCode>
+            <Country isocountrycode="IT">Italy</Country>
+         </Address>
+      </ShipTo>
+      <PaymentInfo>
+         <Terms>
+            <Discount unit="percent">4</Discount>
+            <Days>9</Days>
+            <Net>29</Net>
+         </Terms>
+         <PaymentType>ExacTrac</PaymentType>
+      </PaymentInfo>
+      <InternalInfo />
+      <FreightOnBoard>N/A</FreightOnBoard>
+   </POHeader>
+   <!-- This is the product that you are purchasing -->
+   <POLine linenumber="1" >
+      <WorkflowStatus status="Approved" />      
+      <Item>
+         <CatalogNumber>5221717</CatalogNumber>
+         <Description><![CDATA[Holloween Day]]></Description>
+         <ProductUnitOfMeasure type="system">
+            <Measurement>
+               <MeasurementAmount>1.0</MeasurementAmount>
+               <MeasurementUnit>BX</MeasurementUnit>
+               <MeasurementValue>1.0 BX</MeasurementValue>
+            </Measurement>
+         </ProductUnitOfMeasure>
+         <ProductUnitOfMeasure type="buyer">
+            <Measurement>
+               <MeasurementAmount>1.0</MeasurementAmount>
+               <MeasurementUnit>BX</MeasurementUnit>
+               <MeasurementValue>1.0 BX</MeasurementValue>
+            </Measurement>
+         </ProductUnitOfMeasure>
+         <ProductUnitOfMeasure type="supplier">
+            <Measurement>
+               <MeasurementAmount>1.0</MeasurementAmount>
+               <MeasurementUnit>BX</MeasurementUnit>
+               <MeasurementValue>1.0 BX</MeasurementValue>
+            </Measurement>
+         </ProductUnitOfMeasure>
+         <CommodityCode></CommodityCode>
+         <ProductType>Form</ProductType>
+         <ProductClassification type="Controlled">false</ProductClassification>
+         <ProductClassification type="Green">false</ProductClassification>
+         <ProductClassification type="Hazardous">false</ProductClassification>
+      </Item>
+      <Quantity>100</Quantity>
+      <CapitalExpense>false</CapitalExpense>
+      <FixedAsset>false</FixedAsset>
+      <Taxable>false</Taxable>
+      <LineCharges>
+         <UnitPrice>
+            <Money currency="USD">8.64</Money>
+            <PriceSource>Manual</PriceSource>
+         </UnitPrice>
+      </LineCharges>
+      <DeliveryInfo>
+      <Expedite value="No"/>
+         <ShippingMethod id="0">
+            <Carrier id="0">Best Carrier</Carrier>
+            <MethodName>Best Way</MethodName>
+            <MethodDisplayText>Best Carrier-Best Way</MethodDisplayText>
+         </ShippingMethod>
+         <RequestedDeliveryDate>2018-05-01</RequestedDeliveryDate>
+      </DeliveryInfo>
+      <RequisitionLineRef id="" />
+   </POLine>
+</PurchaseOrder>
+</PurchaseOrderMessage>
+

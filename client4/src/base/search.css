@@ -1,0 +1,58 @@
+.incrementalSearchBox .dijitReset {font-size: 12px;}
+.incrementalSearchBox .dijitReset>input{   font-size:95%;color: #6a727c;}
+.incrementalSearchBox {
+					    margin-bottom: 5px;
+					    margin-left: 2px;
+					    display:inline;
+}
+.incrementalSearchBox .dijitTextBox{ border:1px solid #d1d6db; color:#6a727c;}
+.incrementalSearchBox .dijitTextBoxHover, .incrementalSearchBox .dijitTextBoxFocused { background-color: #ffffff;}
+.incrementalSearchBox .dijitTextBox .dijitInputField { padding:0; }
+.incrementalSearchBox .dijitInputContainer { overflow: inherit;}
+ .incrementalSearchBox .dj_gecko .dijitTextBox .dijitInputInner, .incrementalSearchBox .dj_webkit .dijitTextBox .dijitInputInner {
+					    padding: 0;
+					    padding-left:2px ;
+}
+.incrementalSearchBody .dijitMenuItemHover, .incrementalSearchBody .dijitMenuItemSelected,  .incrementalSearchBody .dijitMenuItemFocused {
+					    background-color: #ffff8c;
+					    color: #666666;
+}
+.incrementalSearchBody .dijitComboBoxHighlightMatch {
+						font-weight : bold;
+						background-color: #ffff8c;
+}
+.incrementalSearchBody .dijitMenuNextButton, .incrementalSearchBody .dijitMenuPreviousButton{ font-weight:bold;}
+
+
+.incrementalSearchBody .listToolbar .dijitPlaceHolder, .incrementalSearchBody .subcombo-filter-container .dijitPlaceHolder {
+	top: 0px;
+}
+
+.optionSub { font-size: 80%; }
+
+/*
+MATTEO: cancellato perche sembrerebbe una classe vestigiale della 12.4; verificare se compariranno side effects non voluti, nel caso va ripristinata e servira controllare t_response.jsp
+.bigComboBoxMenuPopup .dijitPopup.dijitComboBoxMenuPopup {
+    width: 800px;
+}*/
+
+.dijitPlaceHolder {
+	color: #aaaaaa;
+	font-style: italic;
+	left: 4px;
+	letter-spacing: -0.5px;
+	position: absolute;
+	top: 0;
+}
+/*	Disabilitazione della funzionalita' automatica esistente in internet explorer per la rimozione del contenuto degli input;
+	risulta necessario eliminare tale funzionalita' per evitare la doppia X negli input di tipo 'incremental search'*/
+
+.incrementalSearchBox .dijitReset > input:-ms-clear {
+	display: none;
+}
+input[type=text]:: -ms-clear {
+	display: none;
+}
+input::-ms-clear {
+	display: none;
+}

@@ -1,0 +1,91 @@
+<span class="holder" (click)="lgModal.show()"> <img
+	src="assets/help.png" alt=" " title="">Help
+</span>
+
+<div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1"
+	role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="row">
+					<div class="col-sm-6">
+						<img src="assets/JD_Logo.jpg" width="100%" />
+					</div>
+					<div class="col-sm-5">
+						<p class="dialog-title text-right">Virtual Assistant</p>
+					</div>
+					<div class="col-sm-1">
+						<span (click)="lgModal.hide()"><i
+							class="fa fa-close btn btn-danger"></i></span>
+					</div>
+				</div>
+			</div>
+			<div class="modal-body" #chatContainer>
+				<div #chat class="chat">
+					<div *ngFor="let message of messages">
+						<div [@messageState]="message.state">
+							<div id={{message.messageId}} class="message"
+								[ngClass]="{ben:isBen(message)}">
+								<img src="{{message.url}}" />
+								<div>
+									<p>{{message.message}}.</p>
+								</div>
+								<div class="embed-container" *ngIf='message.embed'
+									[innerHtml]="message.embed_code | safeHtml"></div>
+								<div class="iframe_container" *ngIf='message.iframe' ng-csp="no-unsafe-eval | no-inline-style">
+<!-- 									<iframe width="600px" height="400px" [src]="message.embed_code | safeUrl"> -->
+<!-- 									</iframe> -->
+									<app-dashboard url={{message.dashboard}}></app-dashboard>
+									<div class="dashboard_launch"
+										*ngIf="isDashboardAvailable(message)">
+										<img (click)="showDashboard(message.dashboard)"
+											src="assets/dashboard-icon.png" width="64px" height="64px" />
+<!-- 										<img (click)="showDashboard(message.dashboard)" -->
+<!-- 											src="assets/dashboard-icon.png" width="64px" height="64px" />									</div> -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="col-lg-12">
+				<div class="input-group">
+					<span class="input-group-btn">
+						<button *ngIf="micVisible" [disabled]="listening"
+							class="btn btn-warning" (click)="listen()">
+							<i class="fa"
+								[ngClass]="{'fa-microphone fa-lg': !(listening), 'fa-spinner fa-pulse':listening}"></i>
+						</button>
+					</span> <input #questionTextCtrl type="text" [(ngModel)]="questionText"
+						class="form-control" placeholder="What's on your mind?" />  <span class="input-group-btn">
+						<button class="btn btn-success" (click)="askButtonClick()" type="button">Ask!</button>
+					</span>
+				</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<!-- 	Child Modal -->
+<div class="dashboard modal fade child-modal" bsModal #childModal="bs-modal"
+	tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+<!-- 				<h4 class="modal-title pull-left">Second modal</h4> -->
+				<button type="button" class="close pull-right" aria-label="Close"
+					(click)="hideDashboard()">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<iframe [src]="dashboardRef | safeUrl" width="100%" height="100%">
+				</iframe>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 	End Child Modal -->

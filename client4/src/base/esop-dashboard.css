@@ -1,0 +1,742 @@
+/*Attention:
+
+This css is the only one allowed to use px instead rem*/
+/* @import url("web-font.css"); */
+/* @import url("web-font-color.css"); */
+
+#dashboard {
+    margin-left: 58px;
+}
+
+/* dashboard margin when module selector is not available */
+.dashboardAllPage #dashboard {
+	margin-left: 0px;
+}
+
+.dashboardAllPage #dashboard_tablist {
+	margin-left: 58px;
+
+}
+
+.dijitDialog {
+    max-width: 630px;
+}
+.dashConfiguration #dashboard {margin-left: 0;  margin-top: 30px;}
+.dashConfiguration #cntAllPage { background-color:transparent;}
+.dashConfiguration .containerDetail table {border:0;}
+.dashConfiguration #title-wrapper::after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: calc(100% - 35px);
+	background-color: white;
+	height: 100px;
+	z-index: -1;
+	margin-top: -60px;
+	margin-left: -15px;
+	border-radius: 5px;
+}
+.dijitTabContainerTop-tabs { border:0!important;}
+.dijitDialogPaneContent{padding:0!important;}
+.optionMenu h3 {
+	margin: 0;
+	padding: 3px;
+	text-align: center;
+}
+.optionMenu .optionMenuViewport {
+	background-color: white;
+}
+.optionMenu .optionMenuList {
+	padding: 0;
+	margin: 0;
+	overflow: auto;
+}
+.optionMenu .optionMenuItem {
+	cursor: pointer;
+    position: relative;
+}
+.optionMenu .optionMenuItem img {
+	vertical-align: middle;
+	margin-right: 6px;
+}
+.optionMenu .optionMenuItem:HOVER {
+	background-color: #f4f7f8;
+}
+/*optionpanel-style.css*/
+
+.optionPanel {
+	height: 17.5em;
+}
+.dijitContentPane{ text-align:center;}
+.optionMenu {
+    float: left;
+    margin-left: 15px;
+    width: 280px;
+}
+.doubleOptionMenu {
+    width: 577px !important;
+}
+.optionMenu .optionMenuViewport {
+	height: 140px;
+	overflow: auto;
+}
+.optionMenu .optionMenuTitle {
+	line-height: 23px;
+	overflow: hidden;
+}
+.optionMenu .optionMenuItem {
+	line-height: 35px;
+	padding: 0 7px;
+}
+
+/*********************** my calendar widget *******************/
+.myCalendar .dojoxCalendar .dijitCalendarDateLabel {
+    border: 0 solid;
+    height: 26px;
+    line-height: 26px;
+    padding: 3px;
+    width: 26px;
+    margin:auto;
+}
+.dojoxCalendar .dijitCalendarSelectedDate > div, .myCalendar .dijitCalendarCurrentDate > div {
+    background-color: #ffec99 !important;
+    border: 0 solid !important;
+    border-radius: 13px;
+    color: #333333 !important;
+    cursor: not-allowed !important;
+    font-weight: normal;
+
+
+    padding: 0 !important;
+
+}
+.myCalendar .dijitCalendarHighlightedDate > div {
+    background-color: #3779c0;
+    border-radius: 13px;
+    color: #ffffff;
+    font-weight: bold;
+
+
+    padding: 0 !important;
+    text-align: center !important;
+
+}
+.dojoxCalendar .dijitCalendarSelectedDate, .dijitCalendarCurrentDate {
+    background-color: transparent !important;
+    border: medium none !important;
+}
+
+.myCalendar .dojoxCalendar .dijitCalendarDayLabel {
+	width: 10px;
+}
+.myCalendar .dojoxCal-MY-labels .dojoxCal-MY-M-last .dojoxCalendarMonthLabel, .dojoxCal-MY-labels .dojoxCal-MY-G-Template div.dojoxCalendarYearLabel {
+    width: auto;
+}
+.myCalendar .dojoxCal-MY-labels .dojoxCalendarMonthLabel, .dojoxCal-MY-labels .dojoxCalendarYearLabel {
+	padding-top: 0;
+    height: 16px!important;
+}
+.dojoxGridRowOdd td {
+	background-color: #f7fbfd;
+}
+.dojoxGridRowOver td {
+	background-color: #f4f7f8;
+	cursor: pointer;
+}
+.myCalendar .dojoxCalendarDecrease {
+	background-image: url('/esop_custom/images/dashboard/spriteRoundedIconsSmall.gif');
+}
+.myCalendar .dojoxCalendarIncrease {
+	background-image: url('/esop_custom/images/dashboard/spriteRoundedIconsSmall.gif');
+}
+.myCalendar .dojoxCalendar .dojoxCalendarDayYearLabel {
+	background-image: none;
+	padding-right: inherit;
+}
+
+/************************ current milestone widget ************************/
+.currentmilestone .dijitButtonNode .dijitArrowButtonInner{
+	background-image: url('/esop_custom/images/dashboard/open_dhb.gif');
+	background-position: 0 0;
+}
+/**********************************************************************/
+
+.newMessageLabel
+{	padding: 12px;
+	font-weight: bold;
+	text-align: center;}
+
+.dojoxGridHeader .dojoxGridCell {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(249, 252, 254, 1) 47%, rgba(246, 249, 253, 1) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 0 none !important;
+    padding: 9px 11px !important;
+}
+.dojoxGrid {	background-color:#ffffff;}
+.dojoxGridHeader { background-color:transparent;}
+.dojoxGridCell { border:0; padding:0;}
+.dojoxGridHeader .dojoxGridCell  { border:0; border-left:1px solid #ffffff; padding:0;}
+.dojoxGridRow {border:0;}
+.dojoxGridArrowButtonChar {
+    display: block;
+    float: right;
+    margin-right: 3px;
+}
+.dojoxGridRowTable {
+    border: none !important;
+}
+#cntList .newMessages table.gridContainerTable {
+    border-top: 1px solid #E0E0E0!important;
+}
+.dojoxCalendar .dojoxCalendarContainer {
+    border: none;
+}
+
+/*grafica 12.5*/
+
+.dijitTabContainerTop-tabs .dijitTab { top:0!important;}
+
+.dijitTabContainerTop-container {  
+	background: none repeat scroll 0 0 #ffffff;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;    
+    border:0 !important; }
+
+.dijitTabContainerTop-tabs .dijitTab {
+    background: none repeat scroll 0 0 #f7f8f9;
+    border-bottom: 1px solid #f7f8f9;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 17px;
+    margin: 0 0 0 1px;
+    padding: 12px 13px;
+}
+
+.dijitTabContainerTop-tabs .dijitChecked {
+  	border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: none repeat scroll 0 0 #fff;
+    border-bottom: 2px solid #fff;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 17px;
+    padding: 12px 13px;
+}
+
+.frameWidgetTitle {
+	background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(249, 252, 254, 1) 47%, rgba(246, 249, 253, 1) 100%) repeat scroll 0 0;
+	border-bottom: 1px solid #e6eaed;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	cursor: move;
+	padding: 12px;
+}
+.frameWidgetTitle span{    color: #465053;
+    font: 16px Arial;
+    line-height:24px;
+    }
+.frameWidgetTitle img{ margin-right:5px;}
+.frameWidget {
+    overflow: hidden;
+    text-align:left;
+}
+.frameWidgetBorder {
+	border: 1px solid #e6eaed;
+	border-radius: 5px;
+	margin-bottom: 11px;
+	margin-top: 11px;
+}
+.dashboardMenuDialog .frameWidget {
+	border: 1px solid #e6eaed;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+.dijitTabContainerTop-tabs { border-bottom:0;}
+#dashboard .area2On {
+    border-bottom: 1px solid #eef2f6;
+    color: #686f77;
+    font: bold 13px Arial;
+    padding: 10px 0 10px 7px;
+}
+.area3Off li {
+    padding: 10px 11px;
+}
+.area3Off li:nth-child(2n+1) {
+    background: none repeat scroll 0 0 #fff;
+}
+.area3Off li:nth-child(2n) {
+    background: none repeat scroll 0 0 #f7fbfd;
+}
+.area3Off li a {
+    color: #1e96c3;
+    font: 13px Arial;
+    transition: color 0.5s ease-in 0s;    
+}
+.frameWidgetButtons>span {
+    background: none repeat scroll 0 0 #fdfeff;
+    border: 1px solid #e6eaed;
+    border-radius: 3px;
+    display: inline-block;
+    margin-left: 6px;
+    transition: background 0.5s ease-in 0s;
+}
+.frameWidgetButtons>span:hover {
+    background: none repeat scroll 0 0 #ccc;
+}
+.frameWidgetButtons a{
+   display: block;
+    height: 15px;
+    text-indent: -9999px;
+    width: 15px;
+}
+.frameWidgetButtons {
+    float: right;
+    margin-right: 23px;
+    margin-top: 14px;
+}
+.dijitDialog.dashboardMenuDialog:not(#dijit_Dialog_0) {
+    min-width: 630px;
+}
+.dashboardMenuDialog.dijitDialog {
+    box-shadow: 0 0 4px #96a1ab;
+}
+.dijitTabCloseButton {
+    background: url("/esop_custom/images/top/close.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);    
+    font-weight: normal;
+    height: 9px;
+    text-indent: -9999px;
+    width: 8px;
+}
+.dijitTabCloseButton:hover{ background: url("/esop_custom/images/top/close_hover.png") no-repeat scroll center center rgba(0, 0, 0, 0);}
+.dashboardMenuDialog .dijitDialogCloseIcon {
+    display: block !important;
+    height: 15px !important;
+    position: absolute !important;
+    right: 6px;
+    top: 1px !important;
+    vertical-align: middle !important;
+    width: 15px !important;
+}
+.dijitInline.dijitTabStripIcon.dashboardConfigIcon {
+   	background: url("/esop_custom/images/top/sprite-settings.png") no-repeat scroll -27px -3px rgba(0, 0, 0, 0);
+    display: block;
+    height: 15px;
+    text-indent: -9999px;
+    width: 15px;
+     margin-top: 15px;
+     margin-left: 13px;
+}
+.dijitInline.dijitTabStripIcon.dashboardAddIcon {
+     background: url("/esop_custom/images/top/sprite-settings.png") no-repeat scroll -2px -5px rgba(0, 0, 0, 0);
+    display: block;
+    height: 15px;
+    text-indent: -9999px;
+    width: 15px;
+     margin-top: 15px;
+     margin-left: 13px;
+}
+.dijitInline.dijitTabStripIcon.dashboardRefreshIcon {
+     background: url("/esop_custom/images/top/sprite-settings.png") no-repeat scroll -49px -3px rgba(0, 0, 0, 0);
+    display: block;
+    height: 15px;
+    text-indent: -9999px;
+    width: 15px;
+     margin-top: 15px;
+     margin-left: 13px;
+     margin-right: 10px;
+}
+.dashboardIcon.dashboardIconConfigEdit { background: url("/esop_custom/images/top/win-settings.png") no-repeat scroll center center rgba(0, 0, 0, 0);}
+.dashboardIcon.dashboardIconMinimize { background: url("/esop_custom/images/top/minimize.png") no-repeat scroll center center rgba(0, 0, 0, 0);}
+.dashboardIcon.dashboardIconClose  { background: url("/esop_custom/images/top/close.png") no-repeat scroll center center rgba(0, 0, 0, 0);}
+.dashboardIcon.dashboardIconClose:hover  { background: url("/esop_custom/images/top/close_hover.png") no-repeat scroll center center rgba(0, 0, 0, 0);}
+.dashboardIcon.dashboardIconRestore  { background: url("/esop_custom/images/top/restore.png") no-repeat scroll center center rgba(0, 0, 0, 0);}
+.dashboardIcon.dashboardIconConfigEdited  { background: url("/esop_custom/images/top/win-custom-settings.png") no-repeat scroll center center rgba(0, 0, 0, 0);}
+
+#dashboard .dijitSplitterV, #dashboard .dijitGutterV{
+	margin: 0 5px 0 5px;
+	width: 13px;
+}
+.dashboardContentPane {
+	padding : 23px;
+}
+.dashboardColumn.layout-33{
+    width: calc(33.3% - 15.3px); /* 15.3 = (2*23)/3* --->  2*gutter width / 3 column */
+}
+.dashboardColumn.layout-25{
+    width: calc(25% - 11.5px); /* 15.5px = (1*23)/2* --->  2*gutter width / 2 column */
+}
+.dashboardColumn.layout-75{
+    width: calc(75% - 11.5px); /* 15.5px = (1*23)/2* --->  2*gutter width / 2 column */
+}
+.dashboardColumn.layout-50{
+    width: calc(50% - 11.5px); /* 15.5px = (1*23)/2* --->  2*gutter width / 2 column */
+}
+.dojoxCalendarTitle.navToPanel {
+    font-size: 14px;
+    margin-bottom: 13px;
+    margin-top: 5px;
+    text-align: center;
+}
+.dijitCalendarDayLabel {
+    color: #e66b6b;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 0 4px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.dojoxCalendar {
+    width: 100%;
+}
+.dojoxCalendar .dijitCalendarDayLabels, .dojoxCalendarMonthLabels, .dojoxCalendarYearLabels, .dojoxCal-MY-labels {
+    width: 100%;
+}
+.dojoxCalendarContainer {width:100%;}
+.frameWidgetContent .formResponseBtn a {
+    margin: 5px;
+}
+.frameWidgetContent {
+    overflow: auto;
+	padding: 2px;
+}
+.dojoxCalendarBody {
+    width: 100%;
+    height: auto;
+    min-height: 180px;
+}
+.dojoxCalendar .no-header .dojoxCalendarBody {
+    height: 290px;
+}
+.dojoxCalendar .dojoxCalendarBody > div {
+    width: 100%;
+}
+.dojoxCalendar .dijitCalendarDateTemplate {
+    padding: 0 !important;
+    text-align: center !important;
+}
+.dojoxCalendar .dijitCalendarDateLabel {
+    border: 1px solid white;
+    color: #555555;
+    font-size: 12px;
+    font-weight: normal;
+    height: auto;
+    padding: 1px 3px 0;
+    text-align: center;
+    width: auto;
+}
+.dojoxCalendar .dijitCalendarNextMonth, .dojoxCalendar .dijitCalendarPreviousMonth {
+    background-color: #f7fbfd;
+}
+.dijitCalendarWeekTemplate td {
+    border: medium none !important;
+}
+.myCalendar .dijitCalendarHighlightedDate {
+    background-color: transparent;
+}
+.dojoxCalendarHeader {
+    height: 40px;
+    line-height: 40px;
+    padding: 0;
+    width: 100%;
+}
+.dojoxCalendarTitle {
+    cursor: pointer;
+    font-weight: normal;
+}
+.dojoxCalendarIncrease {
+	margin-right: 10px;
+    margin-top: 15px;
+}
+.dojoxCalendarDecrease {
+	margin-left: 10px;
+    margin-top: 13px;
+}
+.myCalendar .dojoxCalendar .dijitCalendarDayLabel {
+    width: auto;
+}
+.dijitCalendarDayLabelTemplate {
+    border-bottom: none;
+}
+.dojoxCalendar .dojoxCalendarFooter {
+    min-height: 25px;
+    height: auto;
+}
+.dojoxGrid .dojoxGridCell{ border:none!important;}
+.dojoxGrid.myCalendar {
+    border: 1px solid #e6eaed;
+}
+.widgetChartLegendLabel {
+    min-width: 50%;
+    text-align: left;
+}
+
+.dashboardMenuDialog .dijitDialogTitleBar {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(249, 252, 254, 1) 47%, rgba(246, 249, 253, 1) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 25px;
+    line-height: 25px;
+    margin-bottom: 10px;
+    border-bottom:1px solid #e6eaed;
+}
+.dashboardMenuDialog .dijitDialogPaneContent {
+    border-top: 0 none;
+    padding: 1em;
+}
+.dashboardMenuDialog .edit-save-wrapper{ text-align:center;}
+.optionMenu .optionMenuViewport {
+    background: none repeat scroll 0 0 #fff;
+    height: 12em;
+    overflow: auto;
+    text-align: left;
+}
+.toolbar.dashbar {
+    background: none repeat scroll 0 0 #f7fbfd;
+    border-bottom: 1px dotted #d1d6db;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-top: 10px;
+    text-align: left;
+}
+.reorderBtn a:hover{ text-decoration:none!important;}
+.dashboardIconAllLeft {
+	display: block;
+    border: 1px solid #dcdddf;
+    border-radius: 3px;
+    height: 25px;
+    margin: 3px;
+    width: 25px;
+	background: url("/esop_custom/images/buttons/goFirstStep_button.png") no-repeat 50% 50% !important;
+	background-color: transparent;
+}
+.dashboardIconMoveLeft {
+	display: block;
+    border: 1px solid #dcdddf;
+    border-radius: 3px;
+    height: 25px;
+    margin: 3px;
+    width: 25px;
+	background: url("/esop_custom/images/buttons/goPreviousStep_button.png") no-repeat 50% 50% !important;
+	background-color: transparent;
+}
+.dashboardIconMoveRight {
+	display: block;
+	border: 1px solid #dcdddf;
+    border-radius: 3px;
+    height: 25px;
+    margin: 3px;
+    width: 25px;
+	background: url("/esop_custom/images/buttons/goNextStep_button.png") no-repeat 50% 50% !important;
+	background-color: transparent;
+}
+.dashboardIconAllRight {
+	display: block;
+    border: 1px solid #dcdddf;
+    border-radius: 3px;
+    height: 25px;
+    margin: 3px;
+    width: 25px;
+	background: url("/esop_custom/images/buttons/goLastStep_button.png") no-repeat 50% 50% !important;
+	background-color: transparent;
+}
+.dashboardIconMoveUp {
+    background: url("/esop_custom//images/buttons/moveUp_button.png") no-repeat scroll 50% 50% rgba(0, 0, 0, 0) !important;
+    border: 1px solid #dcdddf;
+    border-radius: 3px;
+    display: block;
+    height: 25px;
+    margin: 3px;
+    width: 25px;
+}
+.dashboardIconMoveDown {
+    background: url("/esop_custom//images/buttons/moveDown_button.png") no-repeat scroll 50% 50% rgba(0, 0, 0, 0) !important;
+    border: 1px solid #dcdddf;
+    border-radius: 3px;
+    display: block;
+    height: 25px;
+    margin: 3px;
+    width: 25px;
+}
+.reorderDiv table td {
+    border: 1px solid #cedbe4;
+    vertical-align: top;
+}
+.reorderDiv table td.reorderBtnTd { vertical-align:middle;}
+.reorderDiv table .table_cnt_body_a {
+    background-color: #fff;
+}
+.type45Cols-useless {
+    padding: 0;
+}
+.reorder .type45Cols-useless ul {
+    max-height: 200px;
+    min-height: 200px;
+    overflow-y: auto;
+    padding: 5px;
+}
+.dijitTextBox {
+    border: 1px solid #b6bbc1 !important;
+    vertical-align: middle;
+    width: 100%!important;
+}
+.optionMenuViewport .form_container ul > li {
+    float: none;
+    margin-bottom: 10px;
+    padding-right: 0;
+    width: 100%;
+}
+.optionMenuViewport .form_container ul .form_answer{
+	margin-right: 10px;
+	margin-left:10px;
+}
+.configGroupWrapper {
+    padding-right: 20px;
+}
+.widgetConfigDialog .floatingWrapper {
+    margin-bottom: 10px;
+}
+.dijitDialog .button-list > li {
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 10px;
+}
+.optionMenuViewport .secondary ul {
+    float: none;
+    margin-bottom: 3px;
+    margin-top: 8px;
+    text-align: center;
+}
+.dijitCheckBoxInput {
+    opacity: 1!important;
+}
+.dojoxCheckedMultiSelect .dojoxCheckedMultiSelectWrapper {
+    border: 1px solid #b6bbc1 !important;
+}
+.configItem > div > div, .configItem > div {
+    width: 95%;
+}
+.dojoDndItemOver, .frameWidgetTitle{
+    cursor: default!important;
+}
+.cntDashboard .dojoDndItemBefore:before {
+    position:relative;
+	height: 30px;
+	width: auto;
+	background: url("/esop_custom/images/pages/infoOk.png") no-repeat scroll 1rem center #e8f7d1;
+	border: 1px dotted #aed76f;
+	display: block;
+	content: "";
+	margin-bottom: 10px;
+}
+.cntDashboard .dojoDndItemAfter:after {
+	position:relative;
+	height: 30px;
+	width: auto;
+	background: url("/esop_custom/images/pages/infoOk.png") no-repeat scroll 1rem center #e8f7d1;
+	border: 1px dotted #aed76f;
+	display: block;
+	content: "";
+	margin-top: 10px;
+}
+.cntDashboard .dojoDndItemBefore, .cntDashboard .dojoDndItemAfter{ border:0; padding: 0;}
+.configPickListValueItemDisabled {
+	color: #AAB2B3;
+}
+.configItem .dojoDndItemSelected, .configItem .dojoDndItemAnchor {
+	background-color:#407FC3;
+	color:#FFFFFF;
+}
+.configItemNotValid {
+	color: #B22D1C;
+}
+.dijitTooltipContainer {
+    background: none repeat scroll 0 0 #ffffff!important;
+    border: 1px solid #d1d6db!important;
+    color: #465053!important;
+    font-size: small;
+ 	border-radius: 3px!important;
+    box-shadow: 0 0 4px #96a1ab!important;
+}
+.widgetTable.savingFilter {
+    border: 1px solid #dbe5ed;
+}
+.widgetTable.savingFilter th {
+    background-color: #dbe5ed;
+}
+.dijitDialogTitle .dijitTabCloseButton {
+    float: right;
+    margin-left: 12px;
+    margin-right: 10px;
+}
+.dijitDialogTitle .dijitTabCloseButton:hover { cursor:pointer;}
+.dijitInputField.dijitInputContainer {
+    width: 84%;
+}
+.dashboardMenuDialog .dijitInputField.dijitInputContainer {
+    width: auto;
+}
+.dijitValidationTextBoxError .dijitValidationContainer {
+    height: 26px;
+}
+.dijitValidationTextBoxError input.dijitValidationInner, .dijitSelect input, .dijitTextBox input.dijitArrowButtonInner {
+    height: 23px !important;
+}
+.dijitSpinner .dijitArrowButtonInner .dijitInputField {
+    color: #b6bbc1 !important;
+    margin-left: -5px !important;
+    margin-top: -8px !important;
+    padding-bottom: 0 !important;
+    transform: none !important;
+    transform-origin: left top 0 !important;
+    visibility: visible !important;
+    width: auto !important;
+}
+/*remove outline on chrome*/	
+.claro *
+{
+    outline: none;
+}
+.optionMenuItem.selected::after {
+    background-color: rgba(57, 181, 74, 0.8);
+    background-image: url("/esop_custom/images/pages/check.png");
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    content: "";
+    height: 21px;
+    left: 10px;
+    position: absolute;
+    right: 0;
+    top: 9px;
+    width: 21px;
+}
+.dashboardColumn.dijitBorderContainer-child {
+    border: 0;
+}
+.dashboardColumn {
+    overflow: hidden;
+}
+.dojoDndAvatarItem .frameWidgetContent {
+    display: none;
+}
+.dojoDndAvatarItem .frameWidgetButtons {
+    display: none;
+}
+table.dojoDndAvatar {
+    width: inherit;
+    white-space: nowrap;
+}
+#dashboard .formResponseBtn a {
+    color: #587ba1;
+}
+.dojoDndItem{padding: 0!important;}
+.dijitContentPane .frameWidget:last-of-type {
+	margin-bottom: 50px;
+}
+.dijitContentPane .frameWidget:first-of-type .frameWidgetBorder {
+	margin-top: 0;
+}
+
+.configGroupWrapper td {
+    border: 0;
+}

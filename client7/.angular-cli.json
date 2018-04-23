@@ -1,0 +1,70 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "client2"
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "dist",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+				"styles.css",
+				"../node_modules/bootstrap/dist/css/bootstrap.css",
+				"../node_modules/font-awesome/css/font-awesome.css",
+				"base/CheckedMultiSelect.css",
+				"base/dojo-adapter_125.css",
+				"base/esop-dashboard.css",
+				"base/extended.css",
+				"base/print.css",
+				"base/search.css",
+				"base/tlk_default.css"
+      ],
+      "scripts": [
+      				"../node_modules/jquery/dist/jquery.js",
+      				"../node_modules/bootstrap/dist/js/bootstrap.js",
+      				"vendor/viz_v1.js"
+      ],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+  ],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "lint": [
+    {
+      "project": "src/tsconfig.app.json"
+    },
+    {
+      "project": "src/tsconfig.spec.json"
+    },
+    {
+      "project": "e2e/tsconfig.e2e.json"
+    }
+  ],
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "css",
+    "component": {}
+  }
+}

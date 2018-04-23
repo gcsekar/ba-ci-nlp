@@ -1,0 +1,17 @@
+FROM johnpapa/angular-cli as node-angular-cli
+WORKDIR /usr/src/app
+LABEL authors="Chandrasekar Ganesan"
+
+EXPOSE 4200
+
+COPY package*.json ./
+RUN npm install
+# If you are building your code for production
+# RUN sudo npm install --only=production
+COPY src ./src
+COPY e2e ./e2e
+COPY . .
+
+CMD ["ng","serve"]
+
+

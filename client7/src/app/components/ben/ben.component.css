@@ -1,0 +1,310 @@
+/* .modal{ */
+/*     display: block !important; I added this to see the modal, you don't need this */
+/* } */
+
+/* Important part */
+.dialog-title {
+	padding: 15px;
+	font-family: Arial;
+	font-size: 2em;
+	color: #ff9900;
+}
+
+.modal-dialog {
+	overflow-y: initial !important
+}
+
+.modal-content{
+		width: 1000px;
+}
+.modal-body {
+	left: 0px;
+	bottom: 0px;
+	height: 650px;
+	overflow: scroll;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.modal-body textarea {
+	color: #333;
+}
+
+/* .modal-body .visualization{ */
+/* 	padding-left:10px; */
+/* 	padding-top:10px; */
+/* 	border-radius: 10px; */
+/* 	border-shadow:rgba(0,0,0,0.4)  10px 10px; */
+/* } */
+
+/*
+ *  STYLE 4
+ */
+.modal-body::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	background-color: #F5F5F5;
+}
+
+.modal-body::-webkit-scrollbar {
+	width: 5px;
+	background-color: #ff8000;
+}
+
+.modal-footer textarea {
+	color: #333;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+	background-color: #000000;
+	border: 2px solid #555555;
+}
+
+/* body { */
+/*   background-color: #f3f3f3; */
+/*   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+/* } */
+
+/* section { */
+/*   width: 500px; */
+/*   margin: 60px auto; */
+/*   background-color: #fff; */
+/*   padding: 10px 15px 20px 15px; */
+/* } */
+.chat {
+	display: block;
+	width: 100%;
+	height: 90%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	background: #eee;
+}
+
+.chat .message {
+	display: flex;
+	margin: 10px 10px 0 10px;
+	padding: 5px;
+	min-height: 30px;
+	height: auto;
+	text-align: left;
+	box-shadow: 0 15px 15px rgba(0,0,0,0.15);
+  	transition: box-shadow 0.3s ease-in-out;
+  	
+}
+
+.chat .message.ben img {
+	border-radius: 50%;
+	/*   background: url("https://api.randomuser.me/portraits/med/men/64.jpg"); */
+	order: 2;
+	margin: 0 0 0 3px;
+}
+
+.chat .message p {
+	font-size: 15px;
+}
+
+.chat .message.ben div {
+	order: 1;
+	padding: 0 8px 0 0;
+}
+
+.chat .message.ben div p {
+	float: right;
+}
+
+.chat .message.ben div:before {
+	position: relative;
+	float: right;
+	content: '';
+	margin: 7px -8px 0 0;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 8px 0 8px 8px;
+	border-color: transparent transparent transparent #fff;
+}
+
+.chat .message.ben.dashboard_launch div:before {
+	position: relative;
+	float: right;
+	/*   content: ''; */
+	/*   margin: 7px -8px 0 0; */
+	width: 64px;
+	height: 64px;
+	/*   border-style: solid; */
+	/*   border-width: 8px 0 8px 8px; */
+	/*   border-color: transparent transparent transparent #fff; */
+}
+
+.chat .embed-container {
+	display: block;
+}
+
+.chat .iframe-container {
+	display: block;
+	width: 600px;
+	height: 500px;
+}
+
+.chat .message img {
+	display: block;
+	order: 1;
+	margin: 0 10px 0 0;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	box-sizing: border-box;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+}
+
+.chat .message div {
+	display: block;
+	flex: 1;
+	order: 2;
+}
+
+.chat .message div p {
+	display: inline-block;
+	margin: 0;
+	width: auto;
+	padding: 8px 10px 8px 10px;
+	background: #fff;
+	word-wrap: break-word;
+/* 	font-family: Monospace; */
+	font-family:  inherit;
+/* 	font-weight:bold; */
+	border-radius: 3px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.chat .message div:before {
+	position: relative;
+	float: left;
+	content: '';
+	margin: 7px 0 0 -8px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 8px 8px 8px 0;
+	border-color: transparent #fff transparent transparent;
+}
+/* div.ben{ */
+/* 	width:33px; */
+/* 	height:33px; */
+/* 	background: url("https://api.randomuser.me/portraits/med/men/64.jpg"); */
+/* 	border-radius:50%; */
+/* 	float:left; */
+/* } */
+/* div.user{ */
+/* 	width:33px; */
+/* 	height:33px; */
+/* 	background: url("https://api.randomuser.me/portraits/med/men/66.jpg"); */
+/* 	border-radius:50%; */
+/* 	float:right */
+/* } */
+.child-modal .modal-body {
+	left: 0px;
+	bottom: 0px;
+	width: 800px;
+	height: 600px;
+	overflow: scroll;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+	display: none;
+}
+
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+input:checked+.slider {
+	background-color: #2196F3;
+}
+
+input:focus+.slider {
+	box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+input.form-control {
+	margin-top: 3px;
+	/*     padding-left: 15px; */
+}
+
+.child-modal.modal-content {
+    position: relative;
+    display: table; /* This is important */ 
+    overflow-y: auto;    
+    overflow-x: auto;
+    width: 1200px;
+    height:900px;
+    min-width: 300px;   
+}
+
+.child-modal.modal-header {
+	background-color: gray;
+}
+
+.child-modal.modal-body {
+	left: 0px;
+	bottom: 0px;
+	overflow: scroll;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+.child-modal.modal-footer {
+	display: none;
+}
+
+
+	

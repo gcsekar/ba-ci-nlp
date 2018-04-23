@@ -1,0 +1,27 @@
+FROM ubuntu:16.04
+
+MAINTAINER gcsekar@gmail.com	
+
+# Install bash
+RUN sudo apt-get update && apt-get upgrade
+RUN chown -r root /usr/lib/node_modules/
+RUN sudo apt-get install -y curl && sudo apt-get install -y wget
+RUN curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+RUN sudo apt-get install -y nodejs
+RUN npm install angular
+RUN chown -r root /usr/lib/node_modules/@angular/
+RUN npm install @angular/cli
+
+# Create app directory
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+
+
+COPY package.json /usr/src/app
+RUN npm install
+# If you are building your code for production
+# RUN sudo npm install --only=production
+COPY . /usr/src/app
+
+EXPOSE 4200
+CMD ["ng","serve"]

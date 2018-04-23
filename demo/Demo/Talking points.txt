@@ -1,0 +1,21 @@
+
+How-to and why? 
+	Why is there a delay for a contract to move to an expired status?
+	What is the reference code in Contracts?
+	ASK - What is locked and unlocked workflow?
+    ASK - Why am I receiving a message that the Evaluation team is not properly Configured?
+	Is it possible to delete a Supplier?
+	Are contracts in created status visible to suppliers?
+	Will you be able to integrate with SAP ?
+
+	
+Contextual Information
+	what are my active contracts I have with Smurfit?
+
+	
+Contextual Visual information access
+   With followup
+   Get me my supplier info:
+		- Supplier dashboard
+		- Supplier performance
+		

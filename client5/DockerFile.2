@@ -1,0 +1,24 @@
+FROM node:alpine
+
+MAINTAINER <username@emailaddress.com>
+
+# Install bash
+RUN apk add --update bash && rm -rf /var/cache/apk/*
+RUN chown -r root /usr/lib/node_modules/
+RUN npm install angular
+RUN chown -r root /usr/lib/node_modules/@angular/
+RUN npm install @angular/cli
+
+# Create app directory
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+
+
+COPY package.json /usr/src/app
+RUN npm install
+# If you are building your code for production
+# RUN sudo npm install --only=production
+COPY . /usr/src/app
+
+EXPOSE 4200
+CMD ["ng","serve"]

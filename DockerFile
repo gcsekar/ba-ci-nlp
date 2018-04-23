@@ -1,0 +1,41 @@
+FROM ubuntu:16.04
+
+MAINTAINER c.ganesan@bravosolution.com	
+
+# Install bash
+RUN apt-get -y update && apt-get -y upgrade
+RUN chown -R root /usr/lib
+RUN apt-get install -y curl && apt-get install -y wget
+RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
+RUN apt-get install -y nodejs
+RUN npm install -g angular
+RUN apt-get -qq update && apt-get -qq -y install bzip2
+#RUN chown -r root /usr/lib/node_modules/@angular/
+RUN npm install -g @angular/cli
+RUN npm install -g forever
+
+# Deploy Server 
+RUN mkdir -p /usr/src/server
+WORKDIR /usr/src/server
+RUN chown -R root /usr/src/server
+
+COPY server/package.json /usr/src/server
+RUN npm install
+# If you are building your code for production
+# RUN sudo npm install --only=production
+COPY server/. /usr/src/server
+
+# Deploy App
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+RUN chown -R root /usr/src/app
+
+COPY client7/package.json /usr/src/app
+RUN npm install
+# If you are building your code for production
+# RUN sudo npm install --only=production
+COPY client7/. /usr/src/app
+
+EXPOSE 4200
+EXPOSE 3000
+CMD ["forever","start","/usr/src/server/bin/www","&&","ng","serve","--host","0.0.0.0"]

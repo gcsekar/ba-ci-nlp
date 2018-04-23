@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT AccountCode (#PCDATA)>
+<!ELEMENT AccountingDate (#PCDATA)>
+<!ELEMENT Action (Code, Group, Description)>
+<!ELEMENT Address (TemplateName, AddressCode?, Contact*, AddressLine+, City, State?, PostalCode, Country)>
+<!ELEMENT AddressCode (#PCDATA)>
+<!ELEMENT AddressLine (#PCDATA)>
+<!ATTLIST AddressLine
+    linenumber CDATA #REQUIRED
+    label CDATA #IMPLIED
+>
+<!ELEMENT AreaCode (#PCDATA)>
+<!ELEMENT AssetTagNumber (#PCDATA)>
+
+<!ELEMENT APStatus (#PCDATA)>
+<!ATTLIST APStatus status (Open | Close) #REQUIRED>
+
+<!ELEMENT AlternatePONumber (#PCDATA)>
+
+<!ELEMENT Attachments (Attachment*)>
+<!ATTLIST Attachments xmlns:xop CDATA #FIXED "http://www.w3.org/2004/08/xop/include/">
+
+<!ELEMENT Attachment (AttachmentName, AttachmentURL, AttachmentSize?, xop:Include?, AttachmentBase64?)>
+<!ATTLIST Attachment id CDATA #REQUIRED>
+<!ATTLIST Attachment type (file | URL) #REQUIRED>
+
+<!ELEMENT AttachmentName (#PCDATA)>
+<!ELEMENT AttachmentURL (#PCDATA)>
+<!ELEMENT AttachmentSize (#PCDATA)>
+<!ELEMENT AttachmentBase64 (#PCDATA)>
+
+<!ELEMENT Authentication (Identity, SharedSecret)>
+<!ELEMENT AuxiliaryCatalogNumber (#PCDATA)>
+
+<!ELEMENT AustinTetra (#PCDATA)*>
+
+<!ELEMENT BarCode (#PCDATA)>
+<!ELEMENT BillTo (Address)>
+<!ELEMENT BuyerInfo (BuyerContactName?, Email?, Phone?)>
+<!ELEMENT BuyerContactName (#PCDATA)>
+
+<!ELEMENT BusinessUnit (#PCDATA)>
+<!ATTLIST BusinessUnit
+    internalName CDATA #REQUIRED
+>
+<!ELEMENT BusinessUnitVendorId (#PCDATA)>
+
+
+<!ELEMENT CapitalExpense (#PCDATA)>
+<!ELEMENT CardName (#PCDATA)>
+<!ELEMENT CardNumber (#PCDATA)>
+<!ELEMENT CardSecurityCode (#PCDATA)>
+<!ELEMENT Carrier (#PCDATA)>
+<!ATTLIST Carrier
+    id CDATA #IMPLIED
+>
+
+<!ELEMENT CASNumber (#PCDATA)>
+<!ELEMENT CatalogNumber (#PCDATA)>
+
+<!ELEMENT CategoryInfo (CategoryName?, CategoryLevel1?, CategoryLevel2?, CategoryLevel3?, CategoryLevel4?, CategoryLevel5?)>
+
+<!ELEMENT CategoryLevel1 (#PCDATA)*>
+<!ELEMENT CategoryLevel2 (#PCDATA)*>
+<!ELEMENT CategoryLevel3 (#PCDATA)*>
+<!ELEMENT CategoryLevel4 (#PCDATA)*>
+<!ELEMENT CategoryLevel5 (#PCDATA)*>
+
+<!ELEMENT CategoryName (#PCDATA)*>
+
+<!ELEMENT ClauseNumber (#PCDATA)>
+<!ELEMENT ClauseName (#PCDATA)>
+<!ELEMENT ClauseText (#PCDATA)>
+
+<!ELEMENT CustomAttribute (#PCDATA)>
+<!ATTLIST CustomAttribute
+	name CDATA #REQUIRED
+>
+<!ELEMENT CustomAttributes (CustomAttribute)>
+
+<!ELEMENT CustomFieldValueSet (CustomFieldValue?, CustomAttributes?)>
+<!ATTLIST CustomFieldValueSet
+    name CDATA #REQUIRED
+    label CDATA #IMPLIED
+    distributiontype (AmountOfQuantity | AmountOfPrice | PercentOfQuantity | PercentOfPrice) #IMPLIED
+>
+<!ELEMENT CustomFieldValue (Value, Description?)>
+<!ATTLIST CustomFieldValue
+	name CDATA #IMPLIED
+    distributionvalue CDATA #IMPLIED
+    splitindex CDATA #IMPLIED
+    splitAmount CDATA #IMPLIED
+    shippingSplitAmount CDATA #IMPLIED
+    handlingSplitAmount CDATA #IMPLIED
+    tax1SplitAmount CDATA #IMPLIED
+    tax2SplitAmount CDATA #IMPLIED
+>
+
+<!ELEMENT ContactAddress (AddressLine*, City?, State?, PostalCode?, Country?)>
+
+<!ELEMENT Code (#PCDATA)>
+<!ELEMENT ContactInfo (Name?, Phone?, Fax?, Email?, ContactAddress?)>
+<!ATTLIST ContactInfo
+    type CDATA #REQUIRED
+>
+<!ELEMENT ContractEndDate (#PCDATA)>
+<!ELEMENT ContractStartDate (#PCDATA)>
+<!ELEMENT Contact (#PCDATA)>
+<!ATTLIST Contact
+    label CDATA #IMPLIED
+    linenumber CDATA #REQUIRED
+>
+<!ELEMENT CreditCard (CardName, CardNumber, ExpirationDate, CardSecurityCode?)>
+
+<!ELEMENT CreateDateTime (#PCDATA)>
+<!ELEMENT ContractName (#PCDATA)*>
+<!ELEMENT ContractNumber (#PCDATA)>
+<!ELEMENT ContractRenewalNumber (#PCDATA)*>
+<!ELEMENT ContractSavings (#PCDATA)*>
+<!ELEMENT ContractUnitPrice (#PCDATA)*>
+<!ELEMENT ContractUnitPriceVariance (#PCDATA)*>
+<!ELEMENT CommodityCode (#PCDATA)>
+<!ELEMENT ComputedMarkupUnitPrice (Money)>
+<!ELEMENT Country (#PCDATA)>
+<!ATTLIST Country
+    isocountrycode CDATA #REQUIRED
+>
+<!ELEMENT CountryCode (#PCDATA)>
+<!ELEMENT City (#PCDATA)>
+
+<!ELEMENT Current1ListPrice (#PCDATA)*>
+<!ELEMENT Current1ListPriceDate (#PCDATA)*>
+<!ELEMENT Current1UnitPrice (#PCDATA)*>
+<!ELEMENT Current1UnitPriceDate (#PCDATA)*>
+
+<!ELEMENT DeliveryInfo (Expedite?, ShippingMethod?, RequestedDeliveryDate?)>
+<!ELEMENT Description (#PCDATA)>
+
+
+<!ELEMENT DocImage (DocImageSummaryURL,xop:Include)>
+<!ATTLIST DocImage id CDATA #REQUIRED>
+<!ATTLIST DocImage type CDATA #REQUIRED>
+<!ATTLIST DocImage xmlns:xop CDATA #FIXED "http://www.w3.org/2004/08/xop/include/">
+<!ELEMENT DocImageSummaryURL (#PCDATA)>
+
+<!ELEMENT DUNS (#PCDATA)>
+<!ELEMENT ExchangeRate EMPTY>
+<!ATTLIST ExchangeRate
+    currency CDATA #REQUIRED
+    rate CDATA #REQUIRED
+>
+<!ELEMENT ExchangeRates (ExchangeRate+)>
+<!ATTLIST ExchangeRates
+    baseCurrency CDATA #REQUIRED
+>
+<!ELEMENT EvaluatedReceiptSettlement (#PCDATA)>
+<!ELEMENT FixedAsset (#PCDATA)>
+<!ELEMENT FulfillmentAddressInternalId (#PCDATA)>
+<!ELEMENT FulfillmentAddressId (#PCDATA)>
+<!ELEMENT FulfillmentAddressThirdPartyId (#PCDATA)>
+<!ELEMENT Discount (#PCDATA)>
+<!ATTLIST Discount
+    unit (percent|amount) #REQUIRED
+    currency CDATA #IMPLIED
+>
+<!ELEMENT Days (#PCDATA)>
+<!ELEMENT FreightOnBoard (#PCDATA)>
+
+<!ELEMENT Department (#PCDATA)>
+<!ELEMENT DistributionMethod (Fax?, Email?)>
+<!ATTLIST DistributionMethod
+    type (manual|cxml|fax|email|html_email|html_email_attachments) #REQUIRED
+>
+
+<!ELEMENT Email (#PCDATA)>
+<!ELEMENT Event (UserName?, UserFirstName?, UserLastName?, Action, LineNo?, FieldName?, OldValue?, NewValue?, Step?, Note?)>
+<!ATTLIST Event
+    datetime CDATA #REQUIRED
+>
+<!ELEMENT Expedite EMPTY>
+<!ATTLIST Expedite
+    value CDATA #REQUIRED
+>
+<!ELEMENT ExpirationDate (#PCDATA)>
+<!ELEMENT ExtendedItemInfo (GeneralItemInfo?, InternalItemInfo?, ExternalItemInfo?, Form?, FormRequest?)>
+<!ELEMENT ExternalInfo (Note?, Attachments?)>
+<!ELEMENT Extension (#PCDATA)>
+
+<!ELEMENT ExternalItemInfo (ContractStartDate?, ContractEndDate?, Note?, Field*)>
+
+<!ELEMENT ExtendedPrice (Money)>
+<!ELEMENT ExtendedPurchaseOrder (PurchaseOrder, History?)>
+<!ELEMENT Error (ErrorMessage)>
+<!ATTLIST Error
+    type CDATA #REQUIRED
+>
+<!ELEMENT ErrorMessage (#PCDATA)>
+
+<!ELEMENT Fax (TelephoneNumber)>
+<!ELEMENT FederalId (#PCDATA)>
+<!ELEMENT Field (#PCDATA)>
+<!ATTLIST Field
+    label CDATA #REQUIRED
+    fieldname CDATA #REQUIRED
+>
+<!ELEMENT FieldName (#PCDATA)>
+<!ELEMENT FirstName (#PCDATA)>
+
+<!ELEMENT FlatChargeByOrder (Money)>
+<!ELEMENT FlatChargeByLine (Money)>
+
+<!ELEMENT Form (FormType, FormTitle, CatalogNumber?, Description?, FormProductSize*, Quantity?, FormProductUnitOfMeasure*, UNSPSC?, ProductClassification*, ManufacturerInfo?, CategoryInfo?, CommodityCode?, ContractNumber?, CapitalExpense?, Taxable?, FormFields, FormID?, FormElementNumber?)>
+<!ATTLIST Form
+    configId CDATA #REQUIRED
+    configVersion CDATA #REQUIRED
+>
+
+<!ELEMENT FormRequest (FormType, FormTitle, CatalogNumber?, Description?, FormProductSize*, Quantity?, FormProductUnitOfMeasure*, UNSPSC?, ProductClassification*, ManufacturerInfo?, CategoryInfo?, CommodityCode?, ContractNumber?, CapitalExpense?, Taxable?, FormRequestFields, FormRequestID?, FormRequestLineItem?)>
+<!ATTLIST FormRequest
+    templateId CDATA #REQUIRED
+>
+
+<!ELEMENT FormField (FormFieldValue*)>
+<!ATTLIST FormField
+    elementNumber CDATA #REQUIRED
+    fieldType CDATA #REQUIRED
+    internalName CDATA #REQUIRED
+>
+<!ELEMENT FormFieldValue (#PCDATA)>
+<!ATTLIST FormFieldValue
+    internalName CDATA #IMPLIED
+    unitCost CDATA #IMPLIED
+>
+<!ELEMENT FormFields (FormField*)>
+<!ELEMENT FormElementNumber (#PCDATA)>
+<!ELEMENT FormID (#PCDATA)>
+
+<!ELEMENT FormRequestItemField  (FormRequestFieldValue*)>
+<!ATTLIST FormRequestItemField
+    internalName CDATA #REQUIRED
+>
+<!ELEMENT FormRequestFieldValue (#PCDATA)>
+<!ATTLIST FormRequestFieldValue
+    internalName CDATA #IMPLIED
+    unitCost CDATA #IMPLIED
+>
+
+<!ELEMENT FormRequestFields (FormRequestItemField*, FormRequestQuestionList*)>
+
+<!ELEMENT FormRequestQuestionList  (FormRequestQuestion*)>
+
+
+<!ELEMENT FormRequestQuestion  (FormRequestQuestionName, FormRequestQuestionValueList)>
+<!ATTLIST FormRequestQuestion
+    questionIdentifier CDATA #REQUIRED
+>
+
+<!ELEMENT FormRequestQuestionName  (#PCDATA)>
+
+<!ELEMENT FormRequestQuestionValueList  (FormRequestQuestionValue+)>
+
+<!ELEMENT FormRequestQuestionValue (#PCDATA)>
+
+
+<!ELEMENT FormRequestLineItem (#PCDATA)>
+<!ELEMENT FormRequestID (#PCDATA)>
+
+
+<!ELEMENT FormProductSize (Measurement)>
+<!ATTLIST FormProductSize
+    type CDATA #REQUIRED
+>
+<!ELEMENT FormProductUnitOfMeasure (Measurement)>
+<!ATTLIST FormProductUnitOfMeasure
+    type CDATA #REQUIRED
+>
+<!ELEMENT FormTitle (#PCDATA)>
+<!ELEMENT FormType (#PCDATA)>
+
+<!ELEMENT FreeThresholdLimit (Money)>
+
+<!ELEMENT GeneralItemInfo (ProductFormName?, Note?, ProductSize*, Field*)>
+<!ELEMENT Group (#PCDATA)>
+
+<!ELEMENT HasBackorderedItems (#PCDATA)>
+<!ELEMENT HasCancelledItems (#PCDATA)>
+<!ELEMENT HasSupplierEdits (#PCDATA)>
+<!ELEMENT HasShippedItems (#PCDATA)>
+<!ELEMENT HandlingCharges (TaxShippingHandling)>
+
+<!ELEMENT Header (MessageId, Timestamp, Authentication?)>
+
+<!ELEMENT Comments (Comment+)>
+<!ELEMENT Comment (UserName, UserFirstName?, UserLastName?, Value, EmailedTo*, AttachmentID?)>
+<!ATTLIST Comment
+	datetime CDATA #REQUIRED
+>
+<!ELEMENT EmailedTo (EmailAddress*)>
+<!ELEMENT EmailAddress (#PCDATA)>
+<!ELEMENT AttachmentID (#PCDATA)>
+
+<!ELEMENT History (Event*)>
+<!ATTLIST History
+    generateddatetime CDATA #REQUIRED
+>
+<!ELEMENT Identity (#PCDATA)>
+<!ELEMENT InternalInfo (Note?, Attachments*)>
+<!ELEMENT InternalItemInfo (Note?, Field*)>
+
+<!ELEMENT ItemAttribute (Value+)>
+<!ATTLIST ItemAttribute
+    name CDATA #IMPLIED
+>
+
+<!ELEMENT Item (CatalogNumber?, AuxiliaryCatalogNumber?, Description, ProductUnitOfMeasure*, ProductSize*, UNSPSC?, CommodityCode?, ProductReferenceNumber?, ProductType, ProductClassification*, CategoryInfo?, ManufacturerInfo?, ExtendedItemInfo?, LeadTimeDays?, CASNumber?, RadioNuclide?, BarCode?, Form?, ItemAttribute*, PriceInfo?, SerialNumber?, AssetTagNumber?)>
+<!ELEMENT InitialRevisionDateTime (#PCDATA)>
+
+<!ELEMENT LastName (#PCDATA)>
+<!ELEMENT LeadTimeDays (#PCDATA)>
+<!ELEMENT LineCharges (UnitPrice, ExtendedPrice?, ShippingCharges?, HandlingCharges?, Tax1?, Tax2?, DiscountAmount?,ComputedMarkupUnitPrice?)>
+<!ELEMENT LineLevelInternalNote (#PCDATA)>
+<!ELEMENT LineNo (#PCDATA)>
+<!ELEMENT LinkedToLineNumber (#PCDATA)>
+<!ELEMENT ListPrice (#PCDATA)*>
+<!ELEMENT ListPriceDate (#PCDATA)*>
+
+<!ELEMENT ListPriceSavings (#PCDATA)*>
+
+<!ELEMENT ManufacturerInfo (Name?, CatalogNumber?)>
+
+<!ELEMENT Measurement (MeasurementAmount?, MeasurementUnit?, MeasurementValue)>
+<!ELEMENT MeasurementAmount (#PCDATA)>
+<!ELEMENT MeasurementUnit (#PCDATA)>
+<!ELEMENT MeasurementValue (#PCDATA)>
+
+<!ELEMENT MessageId (#PCDATA)>
+<!ELEMENT MethodDisplayText (#PCDATA)>
+<!ELEMENT MethodName (#PCDATA)>
+<!ELEMENT Money (#PCDATA)>
+<!ATTLIST Money
+    currency CDATA #REQUIRED
+>
+<!ELEMENT NAICS (#PCDATA)*>
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT NewValue (#PCDATA)>
+<!ELEMENT Note (#PCDATA)>
+<!ELEMENT Number (#PCDATA)>
+<!ELEMENT Net (#PCDATA)>
+
+<!ELEMENT ObjectErrors (PurchaseOrderRef*, PurchaseOrderLineRef*)>
+
+<!ELEMENT OrderDistribution (DistributionMethod*, DistributionCompletionDate?, OrderAcceptanceInstructions?)>
+<!ELEMENT DistributionCompletionDate (#PCDATA)>
+<!ELEMENT OrderAcceptanceInstructions (#PCDATA)>
+
+<!ELEMENT OldValue (#PCDATA)>
+
+<!ELEMENT PaymentInfo (CreditCard?, Terms?, PaymentType?)>
+<!ELEMENT PaymentType (#PCDATA)>
+<!ELEMENT PercentageRate (#PCDATA)>
+<!ELEMENT Phone (TelephoneNumber)>
+<!ELEMENT POClauses (POClause*)>
+<!ELEMENT POClause (ClauseNumber , ClauseName, ClauseText)>
+<!ELEMENT PONumber (#PCDATA)>
+<!ELEMENT Position (#PCDATA)>
+<!ELEMENT PostalCode (#PCDATA)>
+
+<!ELEMENT POHeader (WorkflowStatus? , SupplierStatus?, APStatus?, EvaluatedReceiptSettlement?, RevisionNumber?, RevisionDate?, DistributeRevision?, DocImage?, PONumber?, AlternatePONumber?, Requestor?, BuyerInfo?, BusinessUnit?, Department?, Priority?, CreateDateTime?, InitialRevisionDateTime?, AccountingDate?, Supplier, OrderDistribution?, BillTo?, ShipTo?, PaymentInfo?, InternalInfo?, ExternalInfo?, FreightOnBoard?, CustomFieldValueSet*, SplittableFieldSetGroup*, RequisitionRef?, ShippingCharges?, HandlingCharges?, Tax1?, Tax2?, DiscountAmount?, POClauses?, ExchangeRates?) >
+<!ATTLIST POHeader
+    id CDATA #IMPLIED
+    type (new | update | cancel) #IMPLIED
+>
+<!ELEMENT POLine (WorkflowStatus? , SupplierStatus?, Item, Quantity, CapitalExpense?, FixedAsset?, Taxable?, LineCharges, DeliveryInfo?, SupplierInfo?, CustomFieldValueSet*, SplittableFieldSetGroup*, RequisitionLineRef?, POClauses?, LineLevelInternalNote?, LinkedToLineNumber?,Brand?)>
+<!ATTLIST POLine
+    linenumber CDATA #REQUIRED
+    id CDATA #IMPLIED
+    type (new | update | cancel) #IMPLIED
+>
+
+
+<!ELEMENT PriceSource (#PCDATA)>
+<!ELEMENT PricingCode (#PCDATA)>
+<!ELEMENT PriceInfo (ListPrice?, ListPriceDate?, ListPriceSavings?, Current1ListPrice?, Current1ListPriceDate?, Current1UnitPrice?, Current1UnitPriceDate?, ContractUnitPrice?, ContractUnitPriceVariance?, ContractSavings?)*>
+<!ELEMENT Priority (#PCDATA)>
+<!ELEMENT ProductClassification (#PCDATA)>
+<!ATTLIST ProductClassification
+     type CDATA #REQUIRED
+>
+<!ELEMENT ProductFormName (#PCDATA)>
+<!ELEMENT ProductReferenceNumber (#PCDATA)>
+<!ELEMENT ProductType (#PCDATA)>
+
+<!ELEMENT ProductSize (Measurement)>
+<!ATTLIST ProductSize
+    type (buyer | supplier | system) #REQUIRED
+>
+<!ELEMENT ProductUnitOfMeasure (Measurement)>
+<!ATTLIST ProductUnitOfMeasure
+     type (buyer | supplier | system) #REQUIRED
+>
+
+<!ELEMENT PurchaseOrderMessage (Header, ((ExtendedPurchaseOrder|PurchaseOrder)+ | ResponseMessage?))>
+<!ATTLIST PurchaseOrderMessage version CDATA #REQUIRED>
+<!ATTLIST PurchaseOrderMessage
+    xmlns CDATA #IMPLIED
+>
+
+
+<!ELEMENT PurchaseOrder (POHeader, POLine+, Comments?)>
+<!ELEMENT PurchaseOrderRef (Error+)>
+<!ATTLIST PurchaseOrderRef
+    ponumber CDATA #REQUIRED
+>
+<!ELEMENT PurchaseOrderLineRef (Error+)>
+<!ATTLIST PurchaseOrderLineRef
+    ponumber CDATA #REQUIRED
+>
+<!ATTLIST PurchaseOrderLineRef
+    linenumber CDATA #REQUIRED
+>
+
+
+<!ELEMENT Quantity (#PCDATA)>
+<!ELEMENT QuoteNumber (#PCDATA)>
+
+<!ELEMENT RadioNuclide (#PCDATA)>
+<!ELEMENT RequestedDeliveryDate (#PCDATA)>
+<!ELEMENT RequisitionRef EMPTY>
+<!ATTLIST RequisitionRef
+    id CDATA #REQUIRED
+>
+<!ELEMENT RequisitionLineRef  EMPTY>
+<!ATTLIST RequisitionLineRef
+    id CDATA #REQUIRED
+>
+<!ELEMENT RevisionNumber (#PCDATA)>
+<!ELEMENT RevisionDate (#PCDATA)>
+<!ELEMENT DistributeRevision (#PCDATA)>
+<!ELEMENT Requestor (UserProfile)>
+<!ELEMENT ResponseMessage (Status, ObjectErrors?)>
+
+<!ELEMENT SerialNumber (#PCDATA)>
+
+<!ELEMENT SharedSecret (#PCDATA)>
+<!ELEMENT SIC (#PCDATA)*>
+<!ELEMENT ShipTo (Address)>
+<!ELEMENT ShippingCharges (TaxShippingHandling)>
+<!ELEMENT ShippingMethod (Carrier?, MethodName?, MethodDisplayText?)>
+<!ATTLIST ShippingMethod
+    id CDATA #IMPLIED
+>
+
+<!ELEMENT SplittableFieldSetGroup (SplittableFieldIndexSet*)>
+<!ELEMENT SplittableFieldIndexSet (SplittableFieldIndex*)>
+<!ATTLIST SplittableFieldIndexSet
+		distributiontype (AmountOfQuantity | AmountOfPrice | PercentOfQuantity | PercentOfPrice) #IMPLIED
+		context CDATA #IMPLIED
+>
+<!ELEMENT SplittableFieldIndex (CustomFieldValue*)>
+<!ATTLIST SplittableFieldIndex
+		splitindex CDATA #IMPLIED
+		distributionvalue CDATA #IMPLIED
+		splitAmount CDATA #IMPLIED
+		shippingSplitAmount CDATA #IMPLIED
+		handlingSplitAmount CDATA #IMPLIED
+		tax1SplitAmount CDATA #IMPLIED
+		tax2SplitAmount CDATA #IMPLIED
+		discountSplitAmount CDATA #IMPLIED
+>
+
+<!ELEMENT SupplierInfo (AccountCode?, PricingCode?, ContractNumber?, ContractName?, ContractRenewalNumber?, Note?, Attachments?, QuoteNumber?)>
+<!ELEMENT Supplier (Name?, SupplierNumber?, ThirdPartyRefNumber?, BusinessUnitVendorId?, DUNS?, FulfillmentAddressInternalId?, FulfillmentAddressId?, FulfillmentAddressThirdPartyId?, ContactInfo*, FederalId?, AustinTetra?, NAICS?, SIC?)>
+<!ATTLIST Supplier
+    id CDATA #IMPLIED
+>
+<!ELEMENT SupplierNumber (#PCDATA)>
+
+<!ELEMENT State (#PCDATA)>
+<!ELEMENT Status (StatusCode, StatusText)>
+<!ELEMENT Step (#PCDATA)>
+<!ELEMENT StatusCode (#PCDATA)>
+<!ELEMENT StatusText (#PCDATA)>
+
+<!ELEMENT SupplierStatus (HasBackorderedItems , HasCancelledItems? , HasSupplierEdits , HasShippedItems)>
+<!ATTLIST SupplierStatus status CDATA #REQUIRED>
+
+<!ELEMENT Tax1 (TaxShippingHandling)>
+<!ELEMENT Tax2 (TaxShippingHandling)>
+<!ELEMENT Taxable (#PCDATA)>
+<!ELEMENT TaxShippingHandling (TSHConfig, TSHActualCharge?)>
+<!ELEMENT TelephoneNumber (CountryCode, AreaCode, Number, Extension?)>
+<!ELEMENT TemplateName (#PCDATA)>
+<!ELEMENT Terms (Discount, Days?, Net?)>
+<!ELEMENT ThirdPartyRefNumber (#PCDATA)>
+<!ELEMENT Timestamp (#PCDATA) >
+<!ELEMENT Title (#PCDATA)>
+<!ELEMENT TSHActualCharge (Money)>
+<!ELEMENT TSHConfig (PercentageRate?, FlatChargeByLine?, FlatChargeByOrder?, FreeThresholdLimit?)>
+<!ATTLIST TSHConfig override (true | false) #REQUIRED>
+<!ELEMENT DiscountAmount ((PercentageRate, Money) | PercentageRate | Money)>
+<!ATTLIST DiscountAmount
+	option (beforetax | aftertax) #REQUIRED
+	type (percent | amount) #REQUIRED
+>
+
+<!ELEMENT UnitPrice (Money, PriceSource?)>
+<!ELEMENT UserFirstName (#PCDATA)>
+<!ELEMENT UserLastName (#PCDATA)>
+<!ELEMENT UserName (#PCDATA)>
+<!ELEMENT UserProfile (Title?, FirstName?, LastName?, Email?, Phone?, BusinessUnit?, Department?, Position?)>
+<!ATTLIST UserProfile
+    username CDATA #REQUIRED
+>
+<!ELEMENT URL (#PCDATA)>
+<!ELEMENT UNSPSC (#PCDATA)>
+<!ELEMENT Value (#PCDATA)>
+
+
+<!ELEMENT WorkflowStatus (#PCDATA)>
+<!ATTLIST WorkflowStatus status CDATA #REQUIRED>
+
+<!ELEMENT xop:Include EMPTY>
+<!ATTLIST xop:Include href CDATA #REQUIRED>

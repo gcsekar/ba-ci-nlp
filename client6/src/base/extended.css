@@ -1,0 +1,46 @@
+/* @import url("../dojox/widget/ColorPicker/ColorPicker.css"); */
+/* @import url("theme.css"); */
+/* @import url("../dojoext/editor/plugins/resources/InsertTag.css"); */
+/* @import url("../dojoext/editor/plugins/resources/SafeEditorPaste.css"); */
+
+#cpWrapper {
+	background-color: #FFFFFF;
+	border: 1px solid #D9E3EB;
+	border-radius: 0.5rem;
+	box-shadow: 0 0 0.4rem #96A1AB;
+	font-weight: bold;
+	position: absolute;
+	width: auto;}
+
+#cpHandler {
+	cursor : move;
+	padding: 0.5rem;
+	text-align: right;}
+#cpHandler:hover {
+	background-color: #F4F6F7;}
+#cpHandler a {
+	font-weight: bold;
+	text-decoration: none;
+	color: #96A1AB;}
+
+#cpWrapper table {
+	margin-top: 0;
+	border: none;
+	width: auto;}
+#cpWrapper .dojoxColorPicker tr td {
+	padding: 0.2rem;
+	border: none;}
+
+#cpWrapper div.dojoxColorPickerBox {
+	border: 1px solid #96A1AB;
+	margin-left: 0.5rem;}
+#cpWrapper div.dojoxColorPickerPreview {
+	border: 1px solid #96A1AB;
+	margin-left: 1rem;
+	width: 10rem;}
+#cpWrapper .dojoxColorPickerOptional input {
+	width: auto;
+	height: 2.5rem;
+	text-align: right;}
+#cpWrapper div.dojoxColorPickerHex {
+	margin-left: 2rem;}

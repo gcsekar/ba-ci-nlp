@@ -1,0 +1,3 @@
+url - https://console.dialogflow.com
+username - amenbottest@gmail.com
+password - amen.bot
